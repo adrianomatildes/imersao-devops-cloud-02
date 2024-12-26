@@ -10,7 +10,7 @@ COPY . .
 RUN GOOS=linux CGO_ENABLED=1 go build -o trade cmd/trade/main.go
 
 # Criação da imagem final
-FROM golang:1.20.3 as app
+FROM golang:1.24rc1 as app
 
 # Definindo o Workdir
 WORKDIR /app
